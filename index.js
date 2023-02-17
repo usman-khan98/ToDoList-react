@@ -1,10 +1,10 @@
-//jshint esversion:6
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors')
+const path = require('path');
 
-
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -68,6 +68,17 @@ app.delete('/tasks/:id', (req, res) => {
       res.send({ message: 'Task deleted successfully' });
     }
   });
+});
+
+
+
+app.get("*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "./to-do-list/build"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
 });
 
 const port = process.env.PORT || 5000;
