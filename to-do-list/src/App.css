@@ -1,0 +1,151 @@
+body {
+    background-image: url(../public/images/goldenGateBridge.jpg);
+}
+
+.list-group-item.list-group-item-action {
+    background: rgb(255 255 255 / 95%);
+}
+
+.list-group-item.list-group-item-action:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.list-group-item.list-group-item-action:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+div.transbox {
+    display: flex;
+    margin: auto;
+    background-color: #ffffff;
+    background: rgba(239, 226, 226, 0.35);
+    margin-top: 100px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 54%;
+    box-shadow: 0px 2px 1px -1px #121212, 3px 2px 20px #121212;
+    color: #878787;
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+
+.menu-icon {
+    margin: auto;
+    margin-right: 1px;
+    margin-left: 20px;
+    color: #999999
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeLarge.m-icon.css-tzssek-MuiSvgIcon-root {
+    font-size: 45px;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall.css-ptiqhd-MuiSvgIcon-root {
+    font-size: 30px;
+}
+
+.expand-icon {
+    margin: auto;
+    margin-right: 25px;
+    color: #999999
+}
+
+.title {
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.list {
+    width: 600px;
+    margin: auto;
+}
+
+.list-group-item.list-group-item-action.addTask {
+    width: max-content;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/*checkbox*/
+
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 0px solid #000000;
+    border-radius: 20px;
+}
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked~.control_indicator {
+    background: #a59f83;
+}
+
+.control:hover input:not([disabled]):checked~.control_indicator,
+.control input:checked:focus~.control_indicator {
+    background: #a59f83;
+}
+
+.control input:disabled~.control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 6px;
+    width: 2px;
+    height: 5px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled~.control_indicator:after {
+    border-color: #7b7b7b;
+}
